@@ -270,6 +270,41 @@ def unionSet():
     print("Append set3 to unionSet by unionSet.update(set3):", unionSet)
 
 
+def intersectionSet():
+    print("\n==== Intersection of two sets:")
+
+    set1 = {"apple", "banana", "cherry"}
+    set2 = {"google", "microsoft", "apple"}
+    print("Original set1:", set1)
+    print("Original set2:", set2)
+
+    set3 = set1.intersection(set2)
+    print("set1.intersection(set2) : ", set3)
+
+
+def differenceSet():
+    set1 = {"a", "b", "c"}
+    set2 = {"d", "e", "a"}
+
+    print("Original set1:", set1)
+    print("Original set2:", set2)
+
+    set3 = set1.difference(set2)
+
+    print("set1.difference(set2), create a new set contains those in set1 but not in set2, ", set3)
+
+
+def symmetricDifferenceSet():
+    set1 = {"a", "b", "c"}
+    set2 = {"d", "e", "a"}
+
+    print("Original set1:", set1)
+    print("Original set2:", set2)
+
+    set3 = set1.symmetric_difference(set2)
+
+    print("set1.symmetric_difference(set2), create a new set contains those in either set1 or set2 but not both, ", set3)
+
 
 if __name__ == "__main__":
 
@@ -306,5 +341,14 @@ if __name__ == "__main__":
     doCRUDSet()
 
     unionSet()
+
+    intersectionSet()
+
+    differenceSet()
+
+    symmetricDifferenceSet()
+
+    print("==== Dict ====")
+    #todo
 
 
