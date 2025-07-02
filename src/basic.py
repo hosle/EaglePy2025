@@ -306,6 +306,139 @@ def symmetricDifferenceSet():
     print("set1.symmetric_difference(set2), create a new set contains those in either set1 or set2 but not both, ", set3)
 
 
+def dictConstruction(myMap):
+    print("\n==== This is dict construction ")
+
+    print("this is key=1", myMap[1])
+
+    if "1" in myMap:
+        # if not check, throw error
+        print("this is key='1'", myMap["1"])
+
+    print("dict.items():", myMap.items())
+
+    myMap["3"] = "ThreeString"
+
+    print("[Add] After dict add '3'='TreeString':", myMap.items())
+
+    myMap.update({4:"Four"})
+
+    print("[Add] After myMap.update({4:'Four'}):", myMap.items())
+
+    myMap.pop("3")
+
+    print("[Remove] After myMap.pop('3'):", myMap.items())
+
+    print("[Copy] Copy a dict to another dict")
+
+    myMap2 = myMap.copy()
+
+    print("myMap2 after myMap.copy():", myMap2.items())
+
+    myMap3 = dict(myMap2)  # Another way to copy a dict
+    if 3 in myMap3:
+        myMap3.pop(3)
+
+    if 2 in myMap3:
+        myMap3.pop(2)
+
+    print("myMap3 after dict(myMap2):", myMap3.items())
+
+    print("myMap is still :", myMap.items())
+
+
+def dictLoop():
+    print("\n==== This is dictLoop")
+
+    myMap = {
+        1: "one",
+        2: "two",
+        # "1": "oneString"
+    }
+    print("[Loop] loop dict")
+    for key, value in myMap.items():
+        print(key, value)
+
+    print()
+
+    print("[Loop] loop dict by key")
+
+    for key in myMap:
+        print(key, myMap[key])
+
+def ifStatement():
+    print("\n==== if statement:")
+
+    x = 6
+
+    if x > 5:
+        print("if elif: x is greater than 5")
+    elif x == 5:
+        print("x is equal to 5")
+    else:
+        print("x is less than 5")
+
+
+    if x > 5 & x < 10:
+        print("if and : x in between 5 and 10")
+
+    match x:
+        case 1:
+            print("match : x is 1")
+        case 2:
+            print("match : x is 2")
+        case _:
+            print("match x : x is something else, not 1 or 2")
+
+
+def whileloop():
+    print("\n==== while loop:")
+
+    i = 0
+    while i < 6:
+        i += 1
+
+        if i == 3:
+            print("continue when i is ", i)
+            continue
+        else:
+            print("i is:", i)
+
+        if i == 4:
+            print("break when i is ", i)
+            break
+
+
+    print("\n---- for loop with range, step 3:")
+
+    for x in range(2, 30, 3):
+        print(x, end=", ")
+
+
+class Car:
+    def __init__(self, owner):
+        self.owner = owner
+
+    def drive(self, destination):
+        print(f"{self.owner} is driving the car to {destination}.")
+
+def classObjects():
+    car = Car("Alice")
+
+    print("[member variable] self.owner =", car.owner)
+
+    print("[member method] execute car.drive(): ")
+
+    car.drive("home")
+
+
+def getBiggerNum(a:int, b:int) -> int:
+    if a > b:
+        return a
+    else:
+        return b
+
+
 if __name__ == "__main__":
 
     print("==== String Basics ====")
@@ -350,5 +483,40 @@ if __name__ == "__main__":
 
     print("==== Dict ====")
     #todo
+
+    myMap = {
+        1: "one",
+        2: "two",
+        # "1": "oneString"
+    }
+
+    dictConstruction(myMap)
+
+    dictLoop()
+
+    print("==== if statement ====")
+
+    ifStatement()
+
+    print("==== loop ")
+
+    whileloop()
+
+
+    print("==== json handling ====")
+    #todo
+    #json.loads()
+#     json.dumps()
+
+    print("==== Class and objects ====")
+    classObjects()
+
+    print("==== python3 function ====")
+    print("getBiggerNum ", getBiggerNum(3, 5))
+
+
+
+
+
 
 
