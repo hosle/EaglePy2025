@@ -189,13 +189,26 @@ def traverseListTupleSetDict():
 def listComprehension():
     print("\n==== List Comprehension:")
 
-    fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+    print("\n==== Enumerate a list:")
 
-    print("Original list:", fruits)
+    simpleList = ["one", "two", "three"]
 
-    newlist = [x for x in fruits if "a" in x]
+    print("Original simple list:", simpleList)
 
-    print("Create new List which item has 'a' : ", newlist)
+    # complexList = [(1, "one"), (2, "two"), (3, "three")]
+
+    complexList = [(i + 1, v) for i, v in enumerate(simpleList)]
+
+    print("Converted complex list:", complexList)
+
+    print("Create a new list with only the second element of each tuple:")
+
+    newlist = [x[1] for x in complexList]
+
+    newlist2 = [x2 for _, x2 in complexList]
+
+    print("Approach 1 : [x[1] for x in complexList] : ", newlist, ", type = ", type(newlist))
+    print("Approach 2 : [x2 for x1, _ in complexList] : ", newlist2, ", type = ", type(newlist2))
 
 
 def sortList():
@@ -366,6 +379,27 @@ def dictLoop():
     for key in myMap:
         print(key, myMap[key])
 
+
+def useDictToCount():
+    print("\n==== This is useDictToCount")
+
+    myDict = {"apple": 1, "banana": 2, "cherry": 3}
+
+    print("Original myList:", myDict)
+
+    givenKey = "apple"
+
+    givenKey2 = "orange"
+
+    myDict[givenKey] = myDict.get(givenKey, 0) + 1
+
+    print(f"after inspect {givenKey}, myDict is now:", myDict)
+
+    myDict[givenKey2] = myDict.get(givenKey2, 0) + 1
+
+    print(f"after inspect {givenKey2}, myDict is now:", myDict)
+
+
 def ifStatement():
     print("\n==== if statement:")
 
@@ -439,6 +473,64 @@ def getBiggerNum(a:int, b:int) -> int:
         return b
 
 
+def sortingList():
+    print("\n==== sorting list")
+
+    origin = [(1,"one"), (10, "ten"), (4, "four")]
+    print("origin list : ", origin)
+
+    sortedList = sorted(origin, key= lambda x : x[0])
+
+    print("new sortedList by sorted(): ", sortedList)
+
+
+    origin.sort(key= lambda it : it[0])
+
+    print("In place sorting List origin : ", origin)
+
+
+def sortingDict():
+    print("\n==== Sorting Dict")
+
+    myDict = dict({
+        1: "One",
+        8: "Eight",
+        2: "Two"
+    })
+
+    print("Origin dict: ", myDict)
+
+    sortedDict = dict(sorted(list(myDict.items())))
+
+    print("sorted Dict: dict -> list -> sort -> dict :", sortedDict)
+
+
+def sortingTuple():
+    print("\n==== Sorting Tuple")
+
+    myTuple = tuple((
+        3,
+        5,
+        10,
+        2,
+        100
+    ))
+
+    print("origin tuple: ", myTuple)
+
+    sortedTuple = tuple(sorted(list(myTuple)))
+
+    print("sorted tuple: tuple -> list -> sort -> tuple :", sortedTuple)
+
+
+def swap(a, b):
+    print(f"Swapping values: a={a}, b={b}")
+
+    a, b = b, a
+
+    print(f"After swap: a={a}, b={b}")
+
+
 if __name__ == "__main__":
 
     print("==== String Basics ====")
@@ -465,6 +557,7 @@ if __name__ == "__main__":
 
     traverseListTupleSetDict()
 
+    # like the filter a list to make another new list with lambda applied to each item
     listComprehension()
 
     sortList()
@@ -482,7 +575,6 @@ if __name__ == "__main__":
     symmetricDifferenceSet()
 
     print("==== Dict ====")
-    #todo
 
     myMap = {
         1: "one",
@@ -493,6 +585,8 @@ if __name__ == "__main__":
     dictConstruction(myMap)
 
     dictLoop()
+
+    useDictToCount()
 
     print("==== if statement ====")
 
@@ -513,6 +607,18 @@ if __name__ == "__main__":
 
     print("==== python3 function ====")
     print("getBiggerNum ", getBiggerNum(3, 5))
+
+    print("==== sorting ====")
+
+    sortingList()
+
+    sortingDict()
+
+    sortingTuple()
+
+    print("==== swap ====")
+
+    swap(10, 20)
 
 
 
