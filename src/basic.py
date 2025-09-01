@@ -1,5 +1,6 @@
 import basic_str
 import basic_collection
+import basic_sorting
 
 
 def ifStatement():
@@ -73,56 +74,6 @@ def getBiggerNum(a:int, b:int) -> int:
         return a
     else:
         return b
-
-
-def sortingList():
-    print("\n==== sorting list")
-
-    origin = [(1,"one"), (10, "ten"), (4, "four")]
-    print("origin list : ", origin)
-
-    sortedList = sorted(origin, key= lambda x : x[0])
-
-    print("new sortedList by sorted(): ", sortedList)
-
-
-    origin.sort(key= lambda it : it[0])
-
-    print("In place sorting List origin : ", origin)
-
-
-def sortingDict():
-    print("\n==== Sorting Dict")
-
-    myDict = dict({
-        1: "One",
-        8: "Eight",
-        2: "Two"
-    })
-
-    print("Origin dict: ", myDict)
-
-    sortedDict = dict(sorted(list(myDict.items())))
-
-    print("sorted Dict: dict -> list -> sort -> dict :", sortedDict)
-
-
-def sortingTuple():
-    print("\n==== Sorting Tuple")
-
-    myTuple = tuple((
-        3,
-        5,
-        10,
-        2,
-        100
-    ))
-
-    print("origin tuple: ", myTuple)
-
-    sortedTuple = tuple(sorted(list(myTuple)))
-
-    print("sorted tuple: tuple -> list -> sort -> tuple :", sortedTuple)
 
 
 def swap(a, b):
@@ -216,11 +167,11 @@ if __name__ == "__main__":
 
     print("==== sorting ====")
 
-    sortingList()
+    basic_sorting.sortingList()
 
-    sortingDict()
+    basic_sorting.sortingDict()
 
-    sortingTuple()
+    basic_sorting.sortingTuple()
 
     print("==== swap ====")
 
