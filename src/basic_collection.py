@@ -2,7 +2,7 @@ import heapq
 
 def sliceList():
     print("\n==== Slicing a list:")
-    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     print("0:5, ", lst[0:5])
     print("6:, ", lst[6:])
     print(":5, ", lst[:5])
@@ -15,6 +15,10 @@ def doCRUDList():
 
     # Construct a list list((a,a,a))
     myList = list(("a", "b", "c"))
+
+    mylist2 = list(["a1", "b1", "c1"])
+
+    print("mylist2:", mylist2)
 
     print("Original list:", myList)
 
