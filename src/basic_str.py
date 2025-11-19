@@ -105,3 +105,18 @@ def startswith_And_endswith():
     s = "hello world"
     print(f"Does '{s}' end with 'world'? {s.endswith('world')}")
     print(f"Does '{s}' end with 'hello'? {s.endswith('hello')}")
+
+def reverse_string():
+    print("\n ==== reverse a string")
+
+    s = "hello world"
+
+    reversed_s = s[::-1]
+
+    print("origin string: ", s)
+
+    print("reverse string: ", reversed_s)
+
+
+if __name__ == "__main__":
+    reverse_string()
