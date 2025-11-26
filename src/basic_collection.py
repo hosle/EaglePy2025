@@ -76,6 +76,14 @@ def doCRUDList():
 
     print("List after myList.pop(1) the #1 element:", myList)
 
+    my_list_1 = []
+
+    try:
+        my_list_1.remove("c")
+    except Exception as e:
+        print("remove error: ", e)
+
+
 
 def traverseListTupleSetDict():
     print("\n==== Traversing a list:")
@@ -91,6 +99,10 @@ def traverseListTupleSetDict():
         print(lst[i], end=",")
 
     print()  # For a new line after traversal
+
+    print("enumerate:")
+    for index, item in enumerate(lst):
+        print(index, "=", item)
 
     # same in tuple
 
@@ -253,6 +265,12 @@ def dictConstruction(myMap):
         # if not check, throw error
         print("this is key='1'", myMap["1"])
 
+    try:
+        myMap["1"]
+    except Exception as e:
+        print("Error key not found : ", e)
+
+
     print("dict.items():", myMap.items())
 
     myMap["3"] = "ThreeString"
@@ -266,6 +284,14 @@ def dictConstruction(myMap):
     myMap.pop("3")
 
     print("[Remove] After myMap.pop('3'):", myMap.items())
+
+    try:
+        myMap.pop("3")
+
+        print("[Remove] After myMap.pop('3'): ", myMap.items())
+    except Exception as e:
+        print("Error not found key when pop: ", e)
+
 
     print("[Copy] Copy a dict to another dict")
 
@@ -295,6 +321,10 @@ def dictLoop():
     }
     print("[Loop] loop dict")
     for key, value in myMap.items():
+        print(key, value)
+
+    print("[Loop] loop dict 2")
+    for (key, value) in myMap.items():
         print(key, value)
 
     print()
@@ -343,4 +373,21 @@ def use_heapq_to_sort_by_count():
 
     max_freq, max_value = heapq.heappop(heap)
 
-    print(f"value {max_value} has highest frequency {max_freq}\n")
+    print(f"value {max_value} has highest frequency {-max_freq}\n")
+
+
+if __name__ == "__main__":
+    # traverseListTupleSetDict()
+    # doCRUDList()
+    # doCRUDSet()
+    # unionSet()
+    # intersectionSet()
+    # differenceSet()
+    # symmetricDifferenceSet()
+
+    # demo_map = {1: "One", 2: "Two"}
+    # dictConstruction(demo_map)
+
+    # dictLoop()
+
+    use_heapq_to_sort_by_count()

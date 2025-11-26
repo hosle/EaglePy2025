@@ -42,7 +42,11 @@ def sortingTuple():
     ))
 
     print("origin tuple: ", myTuple)
+    print("tuple to list: ", list(myTuple))
 
     sortedTuple = tuple(sorted(list(myTuple)))
 
     print("sorted tuple: tuple -> list -> sort -> tuple :", sortedTuple)
+
+if __name__ == "__main__":
+    sortingTuple()
