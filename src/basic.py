@@ -6,7 +6,7 @@ import basic_sorting
 def ifStatement():
     print("\n==== if statement:")
 
-    x = 6
+    x = 5
 
     if x > 5:
         print("if elif: x is greater than 5")
@@ -16,8 +16,39 @@ def ifStatement():
         print("x is less than 5")
 
 
-    if x > 5 & x < 10:
+    if 5 < x < 10:
         print("if and : x in between 5 and 10")
+
+    if 5 <= x <= 10:
+        print("if x is in between 5 and 10 inclusively")
+
+    if x > 5 or x < 10:
+        print("x > 5 or x < 10")
+
+
+    condition1 = True
+    condition2 = False
+
+    if condition1 and condition2:
+        print("AND operator")
+
+    if condition1 or condition2:
+        print("OR operator")
+
+    if not condition1:
+        print("NOT operator")
+
+    x = 1
+
+    y = 2
+
+    print("bitwise exclusive or: ", x ^ y)
+    print("bitwise and: ", x & y)
+    print("bitwise or: ", x | y)
+    print("bitwise not: ", ~ x)
+    print("bitwise left shift: ", x << 2)
+    print("bitwise right shift: ", y >> 2)
+
 
     match x:
         case 1:
@@ -86,96 +117,98 @@ def swap(a, b):
 
 if __name__ == "__main__":
 
-    print("==== String Basics ====")
-
-    basic_str.traverseString()
-
-    basic_str.checkCharInString()
-
-    basic_str.alphabetChar()
-
-    basic_str.sliceString()
-
-    basic_str.removeWhitespace()
-
-    basic_str.splitString()
-
-    basic_str.replaceString()
-
-    basic_str.startswith_And_endswith()
-
-    print("==== List ====")
-
-    basic_collection.sliceList()
-
-    basic_collection.doCRUDList()
-
-    basic_collection.traverseListTupleSetDict()
-
-    # like the filter a list to make another new list with lambda applied to each item
-    basic_collection.listComprehension()
-
-    basic_collection.sortList()
-
-    print("==== Set ====")
-
-    basic_collection.doCRUDSet()
-
-    basic_collection.unionSet()
-
-    basic_collection.intersectionSet()
-
-    basic_collection.differenceSet()
-
-    basic_collection.symmetricDifferenceSet()
-
-    print("==== Dict ====")
-
-    myMap = {
-        1: "one",
-        2: "two",
-        # "1": "oneString"
-    }
-
-    basic_collection.dictConstruction(myMap)
-
-    basic_collection.dictLoop()
-
-    basic_collection.useDictToCount()
-
-    basic_collection.use_heapq_to_sort_by_count()
-
-    print("==== if statement ====")
-
     ifStatement()
 
-    print("==== loop ")
-
-    whileloop()
-
-
-    print("==== json handling ====")
-    #todo
-    #json.loads()
-#     json.dumps()
-
-    print("==== Class and objects ====")
-    classObjects()
-
-    print("==== python3 function ====")
-    print("getBiggerNum ", getBiggerNum(3, 5))
-
-    print("==== sorting ====")
-
-    basic_sorting.sortingList()
-
-    basic_sorting.sortingDict()
-
-    basic_sorting.sortingTuple()
-
-    print("==== swap ====")
-
-    swap(10, 20)
+#     print("==== String Basics ====")
+#
+#     basic_str.traverseString()
+#
+#     basic_str.checkCharInString()
+#
+#     basic_str.alphabetChar()
+#
+#     basic_str.sliceString()
+#
+#     basic_str.removeWhitespace()
+#
+#     basic_str.splitString()
+#
+#     basic_str.replaceString()
+#
+#     basic_str.startswith_And_endswith()
+#
+#     print("==== List ====")
+#
+#     basic_collection.sliceList()
+#
+#     basic_collection.doCRUDList()
+#
+#     basic_collection.traverseListTupleSetDict()
+#
+#     # like the filter a list to make another new list with lambda applied to each item
+#     basic_collection.listComprehension()
+#
+#     basic_collection.sortList()
+#
+#     print("==== Set ====")
+#
+#     basic_collection.doCRUDSet()
+#
+#     basic_collection.unionSet()
+#
+#     basic_collection.intersectionSet()
+#
+#     basic_collection.differenceSet()
+#
+#     basic_collection.symmetricDifferenceSet()
+#
+#     print("==== Dict ====")
+#
+#     myMap = {
+#         1: "one",
+#         2: "two",
+#         # "1": "oneString"
+#     }
+#
+#     basic_collection.dictConstruction(myMap)
+#
+#     basic_collection.dictLoop()
+#
+#     basic_collection.useDictToCount()
+#
+#     basic_collection.use_heapq_to_sort_by_count()
+#
+#     print("==== if statement ====")
+#
+#     ifStatement()
+#
+#     print("==== loop ")
+#
+#     whileloop()
+#
+#
+#     print("==== json handling ====")
+#     #todo
+#     #json.loads()
+# #     json.dumps()
+#
+#     print("==== Class and objects ====")
+#     classObjects()
+#
+#     print("==== python3 function ====")
+#     print("getBiggerNum ", getBiggerNum(3, 5))
+#
+#     print("==== sorting ====")
+#
+#     basic_sorting.sortingList()
+#
+#     basic_sorting.sortingDict()
+#
+#     basic_sorting.sortingTuple()
+#
+#     print("==== swap ====")
+#
+#     swap(10, 20)
 
 
 

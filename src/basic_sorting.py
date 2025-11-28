@@ -4,6 +4,9 @@ def sortingList():
     origin = [(1,"one"), (10, "ten"), (4, "four")]
     print("origin list : ", origin)
 
+    origin.append((2,"Two"))
+    print("After adding element 2: ", origin)
+
     sortedList = sorted(origin, key= lambda x : x[0])
 
     print("new sortedList by sorted(): ", sortedList)
@@ -49,4 +52,5 @@ def sortingTuple():
     print("sorted tuple: tuple -> list -> sort -> tuple :", sortedTuple)
 
 if __name__ == "__main__":
-    sortingTuple()
+    # sortingTuple()
+    sortingList()
