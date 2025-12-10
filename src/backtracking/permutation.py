@@ -7,11 +7,14 @@ def solution(ori_input:list)-> list:
             return
 
         for item in input:
-            # result_item.append(item)
-            next_input = input.copy()
+            result_item.append(item)
+
+            next_input = input[:]
             next_input.remove(item)
 
-            backtrack(result_item + [item], next_input)
+            backtrack(result_item[:], next_input)
+
+            result_item.pop()
 
 
     backtrack([], ori_input)
