@@ -39,21 +39,51 @@ def construction_tree() -> TreeNode2:
     return root
 
 
-def travers_dfs(root: TreeNode2):
+def traverse_dfs(root: TreeNode2):
     if not root:
         return
 
     print(root.val, end=",")
 
-    travers_dfs(root.left)
+    traverse_dfs(root.left)
 
-    travers_dfs(root.right)
+    traverse_dfs(root.right)
+
+
+def traverse_bfs(root: TreeNode2):
+    if not root:
+        return
+
+    queue = [[root]]
+
+    while queue:
+        level = queue.pop(0)
+
+        for node in level:
+            print(node.val, end=", ")
+
+        next_level = []
+
+        for head in level:
+            if head.left:
+                next_level.append(head.left)
+            if head.right:
+                next_level.append(head.right)
+
+        if next_level:
+            queue.append(next_level)
 
 
 def test_case1():
     tree_root1 = construction_tree()
 
-    travers_dfs(tree_root1)
+    print("==== dfs====")
+
+    traverse_dfs(tree_root1)
+
+    print("\n==== bfs====")
+
+    traverse_bfs(tree_root1)
 
 if __name__ == "__main__":
     test_case1()
