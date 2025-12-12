@@ -64,6 +64,15 @@ def test_case2():
     traverse_tree_zigzag(root)
 
 
+def test_case3():
+    ori_arr = [9, None, 21, None, None, 3, 4, None, None, None,None,2, None, 8, 11]
+
+    root = construct_tree(ori_arr)
+
+    print("- traverse tree dfs: ")
+
+    traverse_tree_dfs(root)
+
 
 def traverse_tree_dfs(node: TreeNode):
     if not node: return
@@ -134,6 +143,6 @@ def traverse_tree_zigzag(node: TreeNode):
 
 if __name__ == "__main__":
     # test_case1()
-    test_case2()
-
+    # test_case2()
+    test_case3()
 
