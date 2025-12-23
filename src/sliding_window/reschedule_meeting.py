@@ -10,11 +10,7 @@
 # Return the maximum amount of free time possible after rearranging the meetings.
 #
 # Note that the meetings can not be rescheduled to a time outside the event.
-from collections import deque
 from typing import List
-
-from huggingface_hub.cli.system import env
-
 
 # Constraints:
 #
