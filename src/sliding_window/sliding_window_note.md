@@ -33,3 +33,12 @@ If the problem says:
 “number of subarrays/substrings with at most …” → Template C
 
 fixed window size k → simple rolling window (or deque if max/min)
+
+# It could be sliding window expend to both sides from the middle
+
+# The main idea to construct a sliding window
+
+1. the post pointer keep moving forward, new item join into the condition
+2. the condition breaks, so keep moving forward the pre pointer, remove the most left item from the condition,
+try resolve the condition again
+3. the condition is either sum, diff, window size, count by map etc.
