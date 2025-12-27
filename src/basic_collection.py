@@ -1,4 +1,6 @@
 import heapq
+from typing import Counter
+
 
 def sliceList():
     print("\n==== Slicing a list:")
@@ -353,6 +355,15 @@ def useDictToCount():
     myDict[givenKey2] = myDict.get(givenKey2, 0) + 1
 
     print(f"after inspect {givenKey2}, myDict is now:", myDict)
+
+
+def create_new_dict_to_count_arr():
+    # Example with a list of items
+    data = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+    count = Counter(data)
+
+    print(count)
+    # Output: Counter({'apple': 3, 'banana': 2, 'orange': 1})
 
 
 def use_heapq_to_sort_by_count():
