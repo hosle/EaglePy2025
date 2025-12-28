@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/find-k-closest-elements
 #
 #
-# Given a sorted integer array arr, two integers k and x, return the k closest integers to x in the array. The result should also be sorted in ascending order.
+# Given a sorted integer array arr, two integers k and x, return the k closest integers to x in the array.
+# The result should also be sorted in ascending order.
 #
 # An integer a is closer to x than an integer b if:
 #
@@ -35,25 +36,50 @@ import heapq
 import sys
 
 def test_case1():
-    result = solution3([1,2,3,4,5], 4, 3)
+    result = solution4([1,2,3,4,5], 4, 3)
     print(result)
     assert result == [1,2,3,4]
 
 
 def test_case2():
-    result = solution3([1,1,2,3,4,5], 4, -1)
+    result = solution4([1,1,2,3,4,5], 4, -1)
     print(result)
     assert result == [1, 1, 2, 3]
 
 def test_case3():
-    result = solution3([1,1,1,10,10,10], 1, 9)
+    result = solution4([1,1,1,10,10,10], 1, 9)
     print(result)
     assert result == [10]
 
 def test_case4():
-    result = solution3([0,1,1,1,2,3,6,7,8,9], 9, 4)
+    result = solution4([0,1,1,1,2,3,6,7,8,9], 9, 4)
     print(result)
     assert result == [0,1,1,1,2,3,6,7,8]
+
+
+def solution4(arr: List[int], k: int, x: int) -> List[int]:
+    if k == len(arr):
+        return arr
+
+    post = bisect_left(arr, x)
+
+    pre = post - 1
+
+    while post - pre - 1 < k:
+        if pre == -1:
+            post += 1
+            continue
+
+        if post == len(arr) or abs(arr[post] - x) >= abs(arr[pre] - x):
+            pre -= 1
+        else:
+            post += 1
+
+
+    return arr[pre+1:post]
+
+
+
 
 
 def solution3(arr: List[int], k: int, x: int) -> List[int]:
