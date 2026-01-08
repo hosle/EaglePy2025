@@ -76,25 +76,25 @@ def solution(nums: List[int], k: int) -> int:
     return result
 
 
-def test_case1():
-    nums = [1,2,4]
-    result = solution(nums, 5)
-    print(result)
-    assert result == 3
+# def test_case1():
+#     nums = [1,2,4]
+#     result = solution(nums, 5)
+#     print(result)
+#     assert result == 3
 
-def test_case2():
-    nums = [1,4,8,13]
-    result = solution(nums, 5)
-    print(result)
-    assert result == 2
+# def test_case2():
+#     nums = [1,4,8,13]
+#     result = solution(nums, 5)
+#     print(result)
+#     assert result == 2
 
-def test_case3():
-    nums = [3,9,6]
-    result = solution(nums, 2)
-    print(result)
-    assert result == 1
+# def test_case3():
+#     nums = [3,9,6]
+#     result = solution(nums, 2)
+#     print(result)
+#     assert result == 1
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()

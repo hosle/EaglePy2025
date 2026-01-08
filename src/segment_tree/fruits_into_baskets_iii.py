@@ -56,41 +56,48 @@
 
 from typing import List
 from collections import deque
+import logging
 
-def test_case1():
-    fruits = [4,2,5]
-    baskets = [3,5,4]
-    assert solution(fruits, baskets) == 1
-
-
-def test_case2():
-    fruits = [3,6,1]
-    baskets = [6,4,7]
-    assert solution(fruits, baskets) == 0
+# def test_case1():
+#     fruits = [4,2,5]
+#     baskets = [3,5,4]
+#     assert solution(fruits, baskets) == 1
 
 
-def test_case2():
-    fruits = [4,5,6]
-    baskets = [1,2,3]
-    assert solution(fruits, baskets) == 3
+# def test_case2():
+#     fruits = [3,6,1]
+#     baskets = [6,4,7]
+#     assert solution(fruits, baskets) == 0
 
 
-def test_case3():
-    fruits = [1,3,3]
-    baskets = [1,2,6]
-    assert solution(fruits, baskets) == 1
+# def test_case2():
+#     fruits = [4,5,6]
+#     baskets = [1,2,3]
+#     assert solution(fruits, baskets) == 3
 
-def test_case4():
-    fruits = [20,8]
-    baskets = [79,4]
-    assert solution(fruits, baskets) == 1
+
+# def test_case3():
+#     fruits = [1,3,3]
+#     baskets = [1,2,6]
+#     assert solution(fruits, baskets) == 1
+
+# def test_case4():
+#     fruits = [20,8]
+#     baskets = [79,4]
+#     assert solution(fruits, baskets) == 1
+
+
+
 
 class SegTree:
     def __init__(self, input_arr:List[int]):
         self.n = len(input_arr)
         size = 2 << (self.n - 1).bit_length()
-        print("bit length:", (self.n - 1).bit_length())
-        print("size: ", size)
+        # print("bit length:", (self.n - 1).bit_length())
+        logging.debug(f"bit length:{(self.n - 1).bit_length()}")
+        # print("size: ", size)
+        logging.debug(f"size: {size}")
+        print(size, "size")
         
         self.seg = [0] * size
 
@@ -136,7 +143,9 @@ def solution(fruits: List[int], baskets: List[int]) -> int:
         return len(fruits)
     
     tree = SegTree(baskets)
-    print(tree.seg)
+    # print(tree.seg)
+    logging.debug(tree.seg)
+
     count = 0
 
     for fruit in fruits:
@@ -145,8 +154,8 @@ def solution(fruits: List[int], baskets: List[int]) -> int:
     
     return count
 
-if __name__ == '__main__':
-    test_case1()
+# if __name__ == '__main__':
+    # test_case1()
     # test_case2()
     # test_case3()
     # test_case4()

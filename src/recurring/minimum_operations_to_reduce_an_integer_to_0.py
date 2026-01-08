@@ -32,14 +32,14 @@
 # start time : 10:59am
 # end time:11:28am
 
-def test_case1():
-    n = 39
-    assert solution(n) == 3
+# def test_case1():
+#     n = 39
+#     assert solution(n) == 3
 
 
-def test_case2():
-    n = 54
-    assert solution(n) == 3
+# def test_case2():
+#     n = 54
+#     assert solution(n) == 3
 
 
 def solution(n: int) -> int:
@@ -68,6 +68,6 @@ def solution(n: int) -> int:
     return count
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()

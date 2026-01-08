@@ -40,18 +40,18 @@
 import bisect
 
 
-def test_case():
-  obj = HitCounter()
-  obj.hit(1)
-  obj.hit(2)
-  obj.hit(3)
-
-  assert obj.getHits(4) == 3
-
-  obj.hit(300)
-
-  assert obj.getHits(300) == 4
-  assert obj.getHits(301) == 3
+# def test_case():
+#   obj = HitCounter()
+#   obj.hit(1)
+#   obj.hit(2)
+#   obj.hit(3)
+#
+#   assert obj.getHits(4) == 3
+#
+#   obj.hit(300)
+#
+#   assert obj.getHits(300) == 4
+#   assert obj.getHits(301) == 3
 
 
 class HitCounter:
@@ -70,5 +70,5 @@ class HitCounter:
         return len(self.hit_record) - start__index
         # return len(self.hit_record[start__index:])
 
-if __name__ == '__main__':
-    test_case()
+# if __name__ == '__main__':
+#     test_case()

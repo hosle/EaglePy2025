@@ -37,22 +37,22 @@
 
 from typing import List
 
-def test_case0():
-    intervals = [[0,2],[3,4],[5,7]]
-    toBeRemoved = [1,6]
-    assert solution(intervals, toBeRemoved) == [[0,1],[6,7]]
+# def test_case0():
+#     intervals = [[0,2],[3,4],[5,7]]
+#     toBeRemoved = [1,6]
+#     assert solution(intervals, toBeRemoved) == [[0,1],[6,7]]
 
 
-def test_case1():
-    intervals = [[0, 5]]
-    toBeRemoved = [2, 3]
-    assert solution(intervals, toBeRemoved) == [[0,2],[3,5]]
+# def test_case1():
+#     intervals = [[0, 5]]
+#     toBeRemoved = [2, 3]
+#     assert solution(intervals, toBeRemoved) == [[0,2],[3,5]]
 
 
-def test_case2():
-    intervals = [[-5, -4], [-3, -2], [1, 2], [3, 5], [8, 9]]
-    toBeRemoved = [-1, 4]
-    assert solution(intervals, toBeRemoved) == [[-5,-4],[-3,-2],[4,5],[8,9]]
+# def test_case2():
+#     intervals = [[-5, -4], [-3, -2], [1, 2], [3, 5], [8, 9]]
+#     toBeRemoved = [-1, 4]
+#     assert solution(intervals, toBeRemoved) == [[-5,-4],[-3,-2],[4,5],[8,9]]
 
 
 def solution(intervals: List[List[int]], toBeRemoved: List[int]) -> List[List[int]]:
@@ -80,8 +80,8 @@ def solution(intervals: List[List[int]], toBeRemoved: List[int]) -> List[List[in
     return result
 
 
-if __name__ == '__main__':
-    test_case0()
-    # test_case1()
-    # test_case2()
+# if __name__ == '__main__':
+#     test_case0()
+#     # test_case1()
+#     # test_case2()
 

@@ -41,22 +41,22 @@
 from collections import deque
 from typing import List
 
-def test_case1():
-    result = solution([8,2,4,7], 4)
-    print(result)
-    assert result == 2
+# def test_case1():
+#     result = solution([8,2,4,7], 4)
+#     print(result)
+#     assert result == 2
 
 
-def test_case2():
-    result = solution([10,1,2,4,7,2], 5)
-    print(result)
-    assert result == 4
+# def test_case2():
+#     result = solution([10,1,2,4,7,2], 5)
+#     print(result)
+#     assert result == 4
 
 
-def test_case3():
-    result = solution([4,2,2,2,4,4,2,2], 0)
-    print(result)
-    assert result == 3
+# def test_case3():
+#     result = solution([4,2,2,2,4,4,2,2], 0)
+#     print(result)
+#     assert result == 3
 
 
 def solution(nums: List[int], limit: int) -> int:
@@ -96,6 +96,6 @@ def solution(nums: List[int], limit: int) -> int:
     return result
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()

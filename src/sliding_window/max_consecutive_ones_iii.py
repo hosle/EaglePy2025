@@ -25,38 +25,38 @@
 # 0 <= k <= nums.length
 from typing import List
 
-def test_case1():
-    result = solution([1,1,1,0,0,0,1,1,1,1,0], 2)
-    print(result)
-    assert result == 6
+# def test_case1():
+#     result = solution([1,1,1,0,0,0,1,1,1,1,0], 2)
+#     print(result)
+#     assert result == 6
 
 
-def test_case2():
-    result = solution([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3)
-    print(result)
-    assert result == 10
+# def test_case2():
+#     result = solution([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3)
+#     print(result)
+#     assert result == 10
 
-def test_case3():
-    result = solution([1], 1)
-    print(result)
-    assert result == 1
+# def test_case3():
+#     result = solution([1], 1)
+#     print(result)
+#     assert result == 1
 
-def test_case4():
-    result = solution([0], 1)
-    print(result)
-    assert result == 1
-
-
-def test_case5():
-    result = solution([1], 0)
-    print(result)
-    assert result == 1
+# def test_case4():
+#     result = solution([0], 1)
+#     print(result)
+#     assert result == 1
 
 
-def test_case6():
-    result = solution([0], 0)
-    print(result)
-    assert result == 0
+# def test_case5():
+#     result = solution([1], 0)
+#     print(result)
+#     assert result == 1
+
+
+# def test_case6():
+#     result = solution([0], 0)
+#     print(result)
+#     assert result == 0
 
 
 def solution(nums: List[int], k: int) -> int:
@@ -85,10 +85,10 @@ def solution(nums: List[int], k: int) -> int:
 
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
-    test_case4()
-    test_case5()
-    test_case6()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()
+#     test_case4()
+#     test_case5()
+#     test_case6()

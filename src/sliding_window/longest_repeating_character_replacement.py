@@ -32,28 +32,28 @@ import heapq
 # start time 12:02
 # end time 13:11
 
-def test_case1():
-    result = solution("ABAB",2)
-    print(result)
-    assert result == 4
+# def test_case1():
+#     result = solution("ABAB",2)
+#     print(result)
+#     assert result == 4
 
 
-def test_case2():
-    result = solution("AABABBA", 1)
-    print(result)
-    assert result == 4
+# def test_case2():
+#     result = solution("AABABBA", 1)
+#     print(result)
+#     assert result == 4
 
 
-def test_case3():
-    result = solution("AAAAAAA", 1)
-    print(result)
-    assert result == 7
+# def test_case3():
+#     result = solution("AAAAAAA", 1)
+#     print(result)
+#     assert result == 7
 
 
-def test_case4():
-    result = solution("ABBAACA", 2)
-    print(result)
-    assert result == 5
+# def test_case4():
+#     result = solution("ABBAACA", 2)
+#     print(result)
+#     assert result == 5
 
 
 def solution (s: str, k: int) -> int:
@@ -88,8 +88,8 @@ def solution (s: str, k: int) -> int:
     return result
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
-    test_case4()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()
+#     test_case4()

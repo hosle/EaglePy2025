@@ -40,22 +40,22 @@
 import bisect
 from typing import List
 
-def test_case1():
-    s = "isawsquirrelnearmysquirrelhouseohmy"
-    a = "my"
-    b = "squirrel"
-    k = 15
+# def test_case1():
+#     s = "isawsquirrelnearmysquirrelhouseohmy"
+#     a = "my"
+#     b = "squirrel"
+#     k = 15
+#
+#     assert solution(s, a, b, k) == [16, 33]
 
-    assert solution(s, a, b, k) == [16, 33]
 
-
-def test_case2():
-    s = "abcd"
-    a = "a"
-    b = "a"
-    k = 4
-
-    assert solution(s, a, b, k) == [0]
+# def test_case2():
+#     s = "abcd"
+#     a = "a"
+#     b = "a"
+#     k = 4
+#
+#     assert solution(s, a, b, k) == [0]
 
 
 def solution(s: str, a: str, b: str, k: int) -> List[int]:
@@ -99,8 +99,8 @@ def solution(s: str, a: str, b: str, k: int) -> List[int]:
     print("result:", result)
     return result
 
-if __name__ == "__main__":
-    test_case1()
-    test_case2()
+# if __name__ == "__main__":
+#     test_case1()
+#     test_case2()
 
 

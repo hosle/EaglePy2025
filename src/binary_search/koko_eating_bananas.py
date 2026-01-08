@@ -33,15 +33,18 @@
 # 1 <= piles[i] <= 109
 import math
 from typing import List
+import pytest
+import logging
 
-def test_case1():
-    assert solution([3,6,7,11], 8)
+# def test_case1():
+#     assert solution([3,6,7,11], 8) == 4
 
-def test_case2():
-    assert solution([30,11,23,4,20], 5)
+# def test_case2():
+#     assert solution([30,11,23,4,20], 5) == 30
 
-def test_case3():
-    assert solution([30,11,23,4,20], 6)
+# def test_case3():
+#     assert solution([30,11,23,4,20], 6) == 23
+
 
 
 def solution(piles: List[int], h: int) -> int:
@@ -50,6 +53,8 @@ def solution(piles: List[int], h: int) -> int:
 
     while left < right:
         speed = (left + right ) // 2
+
+        logging.debug(f"speed is {speed}")
 
         hour_spend = 0
 

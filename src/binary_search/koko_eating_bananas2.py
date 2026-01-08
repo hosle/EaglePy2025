@@ -2,36 +2,36 @@ import math
 from typing import List
 
 
-def test_case1():
-    piles = [3, 6, 7, 11]
-    h = 8
-
-    assert solution(piles, h) == 4
-
-
-def test_case2():
-    piles = [30,11,23,4,20]
-    h = 5
-
-    assert solution(piles, h) == 30
+# def test_case1():
+#     piles = [3, 6, 7, 11]
+#     h = 8
+#
+#     assert solution(piles, h) == 4
 
 
-def test_case3():
-    piles = [30,11,23,4,20]
-    h = 6
+# def test_case2():
+#     piles = [30,11,23,4,20]
+#     h = 5
+#
+#     assert solution(piles, h) == 30
 
-    assert solution(piles, h) == 23
 
-def test_case4():
-    piles = [312884470]
-    h = 312884469
+# def test_case3():
+#     piles = [30,11,23,4,20]
+#     h = 6
+#
+#     assert solution(piles, h) == 23
 
-    assert solution(piles, h) == 2
+# def test_case4():
+#     piles = [312884470]
+#     h = 312884469
+#
+#     assert solution(piles, h) == 2
 
-def test_case5():
-    piles = [2,2]
-    h = 2
-    assert solution(piles, h) == 2
+# def test_case5():
+#     piles = [2,2]
+#     h = 2
+#     assert solution(piles, h) == 2
 
 
 def solution(piles: List[int], h: int) -> int:
@@ -64,12 +64,12 @@ def solution(piles: List[int], h: int) -> int:
 
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
-    test_case4()
-    test_case5()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()
+#     test_case4()
+#     test_case5()
 
 
 

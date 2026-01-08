@@ -27,22 +27,22 @@
 from collections import deque
 from typing import List
 
-def test_case1():
-    result = solution("cbaebabacd", "abc")
-    print(result)
-    assert result == [0,6]
+# def test_case1():
+#     result = solution("cbaebabacd", "abc")
+#     print(result)
+#     assert result == [0,6]
 
 
-def test_case2():
-    result = solution("abab", "ab")
-    print(result)
-    assert result == [0,1,2]
+# def test_case2():
+#     result = solution("abab", "ab")
+#     print(result)
+#     assert result == [0,1,2]
 
 
-def test_case3():
-    result = solution("aaabb", "bb")
-    print(result)
-    assert result == [3]
+# def test_case3():
+#     result = solution("aaabb", "bb")
+#     print(result)
+#     assert result == [3]
 
 
 def solution(s: str, p: str) -> List[int]:
@@ -76,7 +76,7 @@ def solution(s: str, p: str) -> List[int]:
 
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()

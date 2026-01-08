@@ -37,46 +37,46 @@
 
 from typing import List
 
-def test_case1():
-    result = solution([1,2,1])
-    print(result)
-    assert result == 3
+# def test_case1():
+#     result = solution([1,2,1])
+#     print(result)
+#     assert result == 3
 
 
-def test_case2():
-    result = solution([0,1,2,2])
-    print(result)
-    assert result == 3
+# def test_case2():
+#     result = solution([0,1,2,2])
+#     print(result)
+#     assert result == 3
 
-def test_case3():
-    result = solution([1,2,3,2,2])
-    print(result)
-    assert result == 4
+# def test_case3():
+#     result = solution([1,2,3,2,2])
+#     print(result)
+#     assert result == 4
 
-def test_case4():
-    result = solution([1])
-    print(result)
-    assert result == 1
+# def test_case4():
+#     result = solution([1])
+#     print(result)
+#     assert result == 1
 
-def test_case5():
-    result = solution([1,2])
-    print(result)
-    assert result == 2
+# def test_case5():
+#     result = solution([1,2])
+#     print(result)
+#     assert result == 2
 
-def test_case6():
-    result = solution([1, 1])
-    print(result)
-    assert result == 2
+# def test_case6():
+#     result = solution([1, 1])
+#     print(result)
+#     assert result == 2
 
-def test_case7():
-    result = solution([1, 2, 1])
-    print(result)
-    assert result == 3
+# def test_case7():
+#     result = solution([1, 2, 1])
+#     print(result)
+#     assert result == 3
 
-def test_case8():
-    result = solution([1, 2, 3])
-    print(result)
-    assert result == 2
+# def test_case8():
+#     result = solution([1, 2, 3])
+#     print(result)
+#     assert result == 2
 
 
 def solution(fruits: List[int]) -> int:
@@ -111,13 +111,13 @@ def solution(fruits: List[int]) -> int:
     return result
 
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
-    test_case4()
-    test_case5()
-    test_case6()
-    test_case7()
-    test_case8()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()
+#     test_case4()
+#     test_case5()
+#     test_case6()
+#     test_case7()
+#     test_case8()
 

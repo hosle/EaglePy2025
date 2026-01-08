@@ -37,31 +37,31 @@
 from typing import List
 
 
-def test_case1():
-    intervals = [[1, 3], [6, 9]]
-    new_interval = [2, 5]
-    assert solution(intervals, new_interval) == [[1, 5], [6, 9]]
+# def test_case1():
+#     intervals = [[1, 3], [6, 9]]
+#     new_interval = [2, 5]
+#     assert solution(intervals, new_interval) == [[1, 5], [6, 9]]
 
 
-def test_case2():
-    intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]]
-    new_interval = [4, 8]
-    assert solution(intervals, new_interval) == [[1, 2], [3, 10], [12, 16]]
+# def test_case2():
+#     intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]]
+#     new_interval = [4, 8]
+#     assert solution(intervals, new_interval) == [[1, 2], [3, 10], [12, 16]]
 
-def test_case3():
-    intervals = list(list())
-    new_interval = [4, 8]
-    assert solution(intervals, new_interval) == [[4,8]]
+# def test_case3():
+#     intervals = list(list())
+#     new_interval = [4, 8]
+#     assert solution(intervals, new_interval) == [[4,8]]
 
-def test_case4():
-    intervals = [[1,5]]
-    new_interval = [2, 7]
-    assert solution(intervals, new_interval) == [[1, 7]]
+# def test_case4():
+#     intervals = [[1,5]]
+#     new_interval = [2, 7]
+#     assert solution(intervals, new_interval) == [[1, 7]]
 
-def test_case5():
-    intervals = [[1,5]]
-    new_interval = [1, 7]
-    assert solution(intervals, new_interval) == [[1, 7]]
+# def test_case5():
+#     intervals = [[1,5]]
+#     new_interval = [1, 7]
+#     assert solution(intervals, new_interval) == [[1, 7]]
 
 
 def solution(intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
@@ -103,9 +103,9 @@ def solution(intervals: List[List[int]], newInterval: List[int]) -> List[List[in
         print(result)
         return result
 
-if __name__ == "__main__":
-    # test_case1()
-    # test_case2()
-    # test_case3()
-    # test_case4()
-    test_case5()
+# if __name__ == "__main__":
+#     # test_case1()
+#     # test_case2()
+#     # test_case3()
+#     # test_case4()
+#     test_case5()

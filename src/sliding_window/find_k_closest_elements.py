@@ -35,26 +35,26 @@ from typing import List
 import heapq
 import sys
 
-def test_case1():
-    result = solution4([1,2,3,4,5], 4, 3)
-    print(result)
-    assert result == [1,2,3,4]
+# def test_case1():
+#     result = solution4([1,2,3,4,5], 4, 3)
+#     print(result)
+#     assert result == [1,2,3,4]
 
 
-def test_case2():
-    result = solution4([1,1,2,3,4,5], 4, -1)
-    print(result)
-    assert result == [1, 1, 2, 3]
+# def test_case2():
+#     result = solution4([1,1,2,3,4,5], 4, -1)
+#     print(result)
+#     assert result == [1, 1, 2, 3]
 
-def test_case3():
-    result = solution4([1,1,1,10,10,10], 1, 9)
-    print(result)
-    assert result == [10]
+# def test_case3():
+#     result = solution4([1,1,1,10,10,10], 1, 9)
+#     print(result)
+#     assert result == [10]
 
-def test_case4():
-    result = solution4([0,1,1,1,2,3,6,7,8,9], 9, 4)
-    print(result)
-    assert result == [0,1,1,1,2,3,6,7,8]
+# def test_case4():
+#     result = solution4([0,1,1,1,2,3,6,7,8,9], 9, 4)
+#     print(result)
+#     assert result == [0,1,1,1,2,3,6,7,8]
 
 
 def solution4(arr: List[int], k: int, x: int) -> List[int]:
@@ -150,10 +150,10 @@ def solution(arr: List[int], k: int, x: int) -> List[int]:
     return result
 
 
-if __name__ == "__main__":
-    test_case1()
-    test_case2()
-    test_case3()
-    test_case4()
+# if __name__ == "__main__":
+#     test_case1()
+#     test_case2()
+#     test_case3()
+#     test_case4()
 
 

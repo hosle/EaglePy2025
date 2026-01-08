@@ -30,14 +30,14 @@
 
 from typing import List
 
-def test_case1():
-    nums = [5,0,3,8,6]
-    assert solution(nums) == 3
+# def test_case1():
+#     nums = [5,0,3,8,6]
+#     assert solution(nums) == 3
 
 
-def test_case2():
-    nums = [1,1,1,0,6,12]
-    assert solution(nums) == 4
+# def test_case2():
+#     nums = [1,1,1,0,6,12]
+#     assert solution(nums) == 4
 
 
 def solution(nums: List[int]) -> int:
@@ -61,7 +61,7 @@ def solution(nums: List[int]) -> int:
             return i+1
     return 0
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
 

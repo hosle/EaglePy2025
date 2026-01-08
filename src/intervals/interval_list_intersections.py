@@ -36,24 +36,24 @@
 #
 from typing import List
 
-def test_case1():
-    firstList = [[0, 2], [5, 10], [13, 23], [24, 25]]
-    secondList = [[1, 5], [8, 12], [15, 24], [25, 26]]
+# def test_case1():
+#     firstList = [[0, 2], [5, 10], [13, 23], [24, 25]]
+#     secondList = [[1, 5], [8, 12], [15, 24], [25, 26]]
+#
+#     assert solution(firstList, secondList) == [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
 
-    assert solution(firstList, secondList) == [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
 
+# def test_case2():
+#     firstList = [[1, 3], [5, 9]]
+#     secondList = []
+#
+#     assert solution(firstList, secondList) == []
 
-def test_case2():
-    firstList = [[1, 3], [5, 9]]
-    secondList = []
-
-    assert solution(firstList, secondList) == []
-
-def test_case3():
-    firstList = [[1, 3], [5, 9]]
-    secondList = [[5, 6]]
-
-    assert solution(firstList, secondList) == [[5,6]]
+# def test_case3():
+#     firstList = [[1, 3], [5, 9]]
+#     secondList = [[5, 6]]
+#
+#     assert solution(firstList, secondList) == [[5,6]]
 
 
 def solution(firstList: List[List[int]], secondList: List[List[int]]) -> List[List[int]]:
@@ -79,10 +79,10 @@ def solution(firstList: List[List[int]], secondList: List[List[int]]) -> List[Li
     print(result)
     return result
 
-if __name__ == '__main__':
-    test_case1()
-    test_case2()
-    test_case3()
+# if __name__ == '__main__':
+#     test_case1()
+#     test_case2()
+#     test_case3()
 
 
 

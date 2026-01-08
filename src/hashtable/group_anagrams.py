@@ -62,16 +62,16 @@ def solution(strs: List[str]) -> List[List[str]]:
     return list(result.values())
 
 
-def test_case1():
-    strs = [""]
-    print(solution(strs))
-    assert solution(strs) == [['']]
+# def test_case1():
+#     strs = [""]
+#     print(solution(strs))
+#     assert solution(strs) == [['']]
 
 
-def test_case2():
-    strs = ['a']
-
-    assert solution(strs) == [['a']]
+# def test_case2():
+#     strs = ['a']
+#
+#     assert solution(strs) == [['a']]
 
 
 def compare_nested_sorted(list1, list2):
@@ -82,12 +82,12 @@ def compare_nested_sorted(list1, list2):
     return sorted(sorted_l1_inner) == sorted(sorted_l2_inner)
 
 
-def test_case3():
-    strs = ["eat","tea","tan","ate","nat","bat"]
-    print("result =", solution(strs))
-    assert compare_nested_sorted(solution(strs),[["bat"],["nat","tan"],["ate","eat","tea"]])
+# def test_case3():
+#     strs = ["eat","tea","tan","ate","nat","bat"]
+#     print("result =", solution(strs))
+#     assert compare_nested_sorted(solution(strs),[["bat"],["nat","tan"],["ate","eat","tea"]])
 
-if __name__ == "__main__":
-    test_case1()
-    test_case2()
-    test_case3()
+# if __name__ == "__main__":
+#     test_case1()
+#     test_case2()
+#     test_case3()

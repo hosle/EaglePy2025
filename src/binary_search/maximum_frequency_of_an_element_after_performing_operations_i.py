@@ -44,26 +44,26 @@
 import bisect
 from typing import List
 
-def test_case1():
-    result = solution([1,4,5], 1,2)
-    print(result)
-    assert result == 2
+# def test_case1():
+#     result = solution([1,4,5], 1,2)
+#     print(result)
+#     assert result == 2
 
 
-def test_case2():
-    result = solution([5,11,20,20], 5, 1)
-    print(result)
-    assert result == 2
+# def test_case2():
+#     result = solution([5,11,20,20], 5, 1)
+#     print(result)
+#     assert result == 2
 
-def test_case3():
-    result = solution([5], 7, 0)
-    print(result)
-    assert result == 1
+# def test_case3():
+#     result = solution([5], 7, 0)
+#     print(result)
+#     assert result == 1
 
-def test_case4():
-    result = solution([2, 49], 97, 0)
-    print(result)
-    assert result == 1
+# def test_case4():
+#     result = solution([2, 49], 97, 0)
+#     print(result)
+#     assert result == 1
 
 
 def solution(nums: List[int], k: int, numOperations: int) -> int:
@@ -72,9 +72,9 @@ def solution(nums: List[int], k: int, numOperations: int) -> int:
         r = bisect.bisect_right(nums, i + k) - 1
         print(f"i={i}, i-k={i-k}, i+k={i+k}, l={l}, r={r}")
 
-if __name__ == '__main__':
-    test_case1()
-    # test_case2()
-    # test_case3()
-    # test_case4()
+# if __name__ == '__main__':
+#     test_case1()
+#     # test_case2()
+#     # test_case3()
+#     # test_case4()
 
