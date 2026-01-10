@@ -62,16 +62,22 @@ def solution(intervals: List[List[int]], toBeRemoved: List[int]) -> List[List[in
     for item in intervals:
         abstract_intervals = []
 
+        #case 1 and 2
         if item[0] < toBeRemoved[0]:
             abstract_intervals.append([item[0],min(item[1], toBeRemoved[0])])
-
+            
+            #case 3
             if item[1] > toBeRemoved[1]:
                 abstract_intervals.append([toBeRemoved[1],item[1]])
-        else:
-            if item[0] > toBeRemoved[1]:
-                abstract_intervals.append(item)
-            elif item[1] > toBeRemoved[1]:
-                abstract_intervals.append([toBeRemoved[1], item[1]])
+        # else:
+            # if item[0] > toBeRemoved[1]:
+            #     abstract_intervals.append(item)
+            # elif item[1] > toBeRemoved[1]:
+            #     abstract_intervals.append([toBeRemoved[1], item[1]])
+        
+        # case 4 and 5
+        elif item[1] > toBeRemoved[1]:
+            abstract_intervals.append([max(item[0],toBeRemoved[1]), item[1]])
 
         if abstract_intervals:
             print(abstract_intervals)

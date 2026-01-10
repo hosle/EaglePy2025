@@ -20,6 +20,29 @@
 from typing import List
 import logging
 import heapq
+import math
+
+def solution2(intervals: List[List[int]]) -> int:
+    count = {}
+    
+    for interval in intervals:
+        count[interval[0]] = count.get(interval[0], 0) + 1
+        count[interval[1]+1] = count.get(interval[1]+1, 0) - 1
+    
+    max_count = -math.inf
+    max_start = 0
+    total = 0
+    
+    for time, amt in sorted(count.items()):
+        total += amt
+        
+        if total > max_count:
+            max_count = total
+            max_start = time
+    
+    return max_count
+    
+    
 
 def solution(intervals: List[List[int]]) -> int:
 
