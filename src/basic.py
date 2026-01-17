@@ -115,6 +115,37 @@ def swap(a, b):
     print(f"After swap: a={a}, b={b}")
 
 
+def count_frequency():
+    
+    # approach 1 
+    use_map = {}
+    
+    # approach 2 : use xor
+    
+    freq = 0
+    
+    target = 2
+    freq = freq ^ (1 << target)
+    
+    
+def find_unique_number_in_array(arr):
+    
+    result = 0
+    
+    for item in arr:
+       result = result ^ item
+       
+    return result  
+
+def atmost_1_odd_frequency():
+    target = 0
+    
+    if target & (target-1) == 0:
+        print("at most 1 digit is odd")
+    else:
+        print("more than 1 digit is odd")
+    
+
 if __name__ == "__main__":
 
     ifStatement()
