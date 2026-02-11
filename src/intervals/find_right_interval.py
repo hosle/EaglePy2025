@@ -31,40 +31,37 @@
 #
 # Constraints:
 #
-# 1 <= intervals.length <= 2 * 104
+# 1 <= intervals.length <= 2 * 10^4
 # intervals[i].length == 2
-# -106 <= starti <= endi <= 106
+# -10^6 <= starti <= endi <= 10^6
 # The start point of each interval is unique.
 #
 #
 # start time:17:14
 # end time: 17:40
 # improvement end time: 17:47
-import bisect
-from typing import List
-
+# 
 # def test_case_1():
 #     intervals = [[1, 2]]
 #     assert solution(intervals) == [-1]
-
-
+# 
 # def test_case_2():
 #     intervals = [[3,4],[2,3],[1,2]]
 #     assert solution(intervals) == [-1,0,1]
-
-
+# 
 # def test_case_3():
 #     intervals = [[1, 4], [2, 3], [3, 4]]
 #     assert solution(intervals) == [-1,2,-1]
-
+# 
 # def test_case_4():
 #     intervals = [[1,12],[2,9],[3,10],[13,14],[15,16],[16,17]]
 #     assert solution(intervals) == [3,3,3,4,5,-1]
-
+# 
 # def test_case_5():
 #     intervals = [[1,1],[3,4]]
 #     assert solution(intervals) == [0,-1]
-
+import bisect
+from typing import List
 
 def solution(intervals: List[List[int]]) -> List[int]:
     intervals_with_index = [(item, index) for index, item in enumerate(intervals)]

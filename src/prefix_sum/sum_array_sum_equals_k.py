@@ -18,12 +18,30 @@
 #
 # Constraints:
 #
-# 1 <= nums.length <= 2 * 104
+# 1 <= nums.length <= 2 * 10^4
 # -1000 <= nums[i] <= 1000
-# -107 <= k <= 107
+# -10^7 <= k <= 10^7
 #
 from typing import List
 import logging
+
+def solution3(nums: List[int], k: int) -> int:
+    sum_arr = [0] * (len(nums)+1)
+    
+    for i in range(1, len(nums)+1):
+        sum_arr[i] = sum_arr[i-1]+nums[i-1]
+    
+    logging.debug(f"{sum_arr=}")
+    
+    result = 0
+    for i in range(len(sum_arr)):
+        for j in range(1, len(sum_arr)):
+            if sum_arr[j] - sum_arr[i] == k:
+                result += 1
+    
+    return result
+    
+    
 
 def solution2(nums: List[int], k: int) -> int: 
     count_dict ={0:1}
@@ -39,8 +57,10 @@ def solution2(nums: List[int], k: int) -> int:
         if left_sum in count_dict:
             count += count_dict[left_sum]
         
-        count_dict[pre_sum] = count_dict.get(pre_sum,0) + 1
-        
+        count_dict[pre_sum] = count_dict.get(pre_sum, 0) + 1
+    
+    print(f"{count_dict=}")
+    
     return count
             
     

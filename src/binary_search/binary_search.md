@@ -12,5 +12,3 @@
    1. Consider the duplicated elements in the array, what to do when arr[mid] == target. continue search? to right or left?
 
 ## consider the condition while (low < high) or while (low <= high), if the afterward action when equals found, should let low==high case go into the loop
-
-## 

@@ -1,3 +1,5 @@
+from typing import List
+
 def traverseString():
     print("==== Traversing a string:")
     s = "hello world"
@@ -117,8 +119,42 @@ def reverse_string():
     print("origin string: ", s)
 
     print("reverse string: ", reversed_s)
+  
+    
+def all_substrings_of_string(s):
+    result = []
+    for i in range (len(s)):
+        for j in range(i, len(s)):
+            result.append(s[i:j+1])
+    
+    print(f"{result=}")
+
+
+def all_partitions_of_string(s):
+    
+    result = []
+    
+    def backtracking(path, start_i):
+        if start_i >= len(s):
+            result.append(path[:])
+            return
+        
+        for i in range(start_i+1, len(s)+1):
+            path.append(s[start_i:i])
+            backtracking(path, i)
+            path.pop()
+        
+        return result
+
+    backtracking([],0)
+    
+    print(f"{result=}")
+        
 
 
 if __name__ == "__main__":
-    reverse_string()
-    sliceString()
+    # reverse_string()
+    # sliceString()
+    # all_substrings_of_string("abcd")
+    
+    all_partitions_of_string("abcd")

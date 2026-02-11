@@ -11,7 +11,6 @@
 # Test cases are generated such that partitioning exists.
 #
 #
-#
 # Example 1:
 #
 # Input: nums = [5,0,3,8,6]
@@ -24,21 +23,18 @@
 # Explanation: left = [1,1,1,0], right = [6,12]
 # Constraints:
 #
-# 2 <= nums.length <= 105
-# 0 <= nums[i] <= 106
+# 2 <= nums.length <= 10^5
+# 0 <= nums[i] <= 10^6
 # There is at least one valid answer for the given input.
-
-from typing import List
-
+#
 # def test_case1():
 #     nums = [5,0,3,8,6]
 #     assert solution(nums) == 3
-
-
 # def test_case2():
 #     nums = [1,1,1,0,6,12]
 #     assert solution(nums) == 4
 
+from typing import List
 
 def solution(nums: List[int]) -> int:
     max_lefts = [0] * len(nums)

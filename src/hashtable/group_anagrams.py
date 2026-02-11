@@ -1,10 +1,7 @@
-# https://leetcode.com/problems/group-anagrams/description/?envType=problem-list-v2&envId=hash-table
-from typing import List
-
-
-# Given an array of strings strs, group the anagrams together. You can return the answer in any order.
-#
-#
+# https://leetcode.com/problems/group-anagrams/description/
+# 
+# Given an array of strings strs, group the anagrams together. 
+# You can return the answer in any order.
 #
 # Example 1:
 #
@@ -33,13 +30,13 @@ from typing import List
 #
 # Constraints:
 #
-# 1 <= strs.length <= 104
+# 1 <= strs.length <= 10^4
 # 0 <= strs[i].length <= 100
 # strs[i] consists of lowercase English letters.
-
 # Start Time: 15:43
 # End Time: 16:08
 # Duration: 25mins
+from typing import List
 
 def solution(strs: List[str]) -> List[List[str]]:
     result = dict()

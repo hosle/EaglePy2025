@@ -1,7 +1,7 @@
 import basic_str
 import basic_collection
 import basic_sorting
-
+import bisect
 
 def ifStatement():
     print("\n==== if statement:")
@@ -101,10 +101,12 @@ def classObjects():
 
 
 def getBiggerNum(a:int, b:int) -> int:
-    if a > b:
-        return a
-    else:
-        return b
+    # if a > b:
+    #     return a
+    # else:
+    #     return b
+    
+    return a if a > b else b
 
 
 def swap(a, b):
@@ -120,7 +122,7 @@ def count_frequency():
     # approach 1 
     use_map = {}
     
-    # approach 2 : use xor
+    # approach 2 : use xor, only appear odd time
     
     freq = 0
     
@@ -144,11 +146,21 @@ def atmost_1_odd_frequency():
         print("at most 1 digit is odd")
     else:
         print("more than 1 digit is odd")
+
+
+def bisect_test():
+    arr = [1,2,3,4,5,6,7]
     
+    found_i = bisect.bisect(arr, 4)
+    
+    print(f"bisect found index = {found_i}")
 
 if __name__ == "__main__":
 
-    ifStatement()
+    bisect_test()
+    
+    # ifStatement()
+    
 
 #     print("==== String Basics ====")
 #

@@ -337,6 +337,18 @@ def dictLoop():
         print(key, myMap[key])
 
 
+def dictGetkeysValues():
+    
+    myMap = {
+        "a" : 1,
+        "b" : 2,
+        "c" : 3
+    }
+    
+    print(f"keys = {myMap.keys()}")
+    print(f"values = {myMap.values()}")
+
+
 def useDictToCount():
     print("\n==== This is useDictToCount")
 
@@ -401,4 +413,5 @@ if __name__ == "__main__":
 
     # dictLoop()
 
-    use_heapq_to_sort_by_count()
+    # use_heapq_to_sort_by_count()
+    dictGetkeysValues()

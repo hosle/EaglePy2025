@@ -17,9 +17,9 @@
 #
 # Constraints:
 #
-# 1 <= eventTime <= 109
+# 1 <= eventTime <= 10^9
 # n == startTime.length == endTime.length
-# 2 <= n <= 105
+# 2 <= n <= 10^5
 # 1 <= k <= n
 # 0 <= startTime[i] < endTime[i] <= eventTime
 # endTime[i] <= startTime[i + 1] where i lies in the range [0, n - 2].
